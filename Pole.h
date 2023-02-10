@@ -12,13 +12,16 @@
 
 class Pole
 {
-public:
+private:
 	//viz Render.h
-	int line = 16;
-	//tahle classa pouívá pouze constructor
+	int line = 22;
+public:
+	//tahle classa pouÅ¾Ã­vÃ¡ pouze constructor
 	Pole();
-	//vektor s informací o pozici kadı buòky. Pak se dává do Render.h skrz main()
+	void setPos();
+	void setTiles();
+	//vektor s informacÃ­ o pozici kaÅ¾dÃ½ buÅˆky. Pak se dÃ¡vÃ¡ do Render.h skrz main()
 	std::vector<std::vector<sf::Vector2f>> talesPos;
-	//vektor s informacemo o kadı buòce, jako barva, velikost, atd. to samı, co s tim prvnim
+	//vektor s informacemo o kaÅ¾dÃ½ buÅˆce, jako barva, velikost, atd. to samÃ½, co s tim prvnim
 	std::vector<std::vector<sf::RectangleShape>> tales;
 };
