@@ -2,15 +2,14 @@
 #include "Pole.h"
 
 int main() {
-	//vytvoøení objektù, pøièem se spustí constructory
+	//vytvoÅ™enÃ­ objektÅ¯, pÅ™iÄemÅ¾ se spustÃ­ constructory
 	Pole tales;
 	Render window;
-	
-	//tady se pøedá obsah vektorù z Pole.h do Redner.h
-	//Redner teï má potøebnı informace k chodu
+	//tady se pÅ™edÃ¡ obsah vektorÅ¯ z Pole.h do Redner.h
+	//Redner teÄ mÃ¡ potÅ™ebnÃ½ informace k chodu
 	window.cellPos = tales.talesPos;
 	window.cell = tales.tales;
-	//funkce, ketrá v podstatì spouští Render.cpp
+	//funkce, ketrÃ¡ v podstatÄ› spouÅ¡tÃ­ Render.cpp
 	window.rend();
 
 	return 0;
