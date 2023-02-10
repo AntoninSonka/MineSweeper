@@ -124,35 +124,35 @@ sf::Texture Render::setCisla(int x, int y)
 	switch (count) {
 	case 1:
 		if (!texture.loadFromFile("TextureTest.png"))
-			std::cerr << "Failed to load texture" << std::endl;
+			std::cout << "Failed to load texture" << std::endl;
 		break;
 	case 2:
 		if (!texture.loadFromFile("TextureTest.png"))
-			std::cerr << "Failed to load texture" << std::endl;
+			std::cout << "Failed to load texture" << std::endl;
 		break;
 	case 3:
 		if (!texture.loadFromFile("TextureTest.png"))
-			std::cerr << "Failed to load texture" << std::endl;
+			std::cout << "Failed to load texture" << std::endl;
 		break;
 	case 4:
 		if (!texture.loadFromFile("TextureTest.png"))
-			std::cerr << "Failed to load texture" << std::endl;
+			std::cout << "Failed to load texture" << std::endl;
 		break;
 	case 5:
 		if (!texture.loadFromFile("TextureTest.png"))
-			std::cerr << "Failed to load texture" << std::endl;
+			std::cout << "Failed to load texture" << std::endl;
 		break;
 	case 6:
 		if (!texture.loadFromFile("TextureTest.png"))
-			std::cerr << "Failed to load texture" << std::endl;
+			std::cout << "Failed to load texture" << std::endl;
 		break;
 	case 7:
 		if (!texture.loadFromFile("TextureTest.png")) {
-			std::cerr << "Failed to load texture" << std::endl;
+			std::cout << "Failed to load texture" << std::endl;
 			break;
 	case 8:
 		if (!texture.loadFromFile("TextureTest.png"))
-			std::cerr << "Failed to load texture" << std::endl;
+			std::cout << "Failed to load texture" << std::endl;
 		break;
 	default:
 		break;
