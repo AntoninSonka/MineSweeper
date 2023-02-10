@@ -4,28 +4,30 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 
-#define HIGHT 1000.f	//vıška obrazovky
-#define LENGHT 1000.f	//dılka obrazovky
-#define OUTLINE 5.f		//mezery okolo jednotlivejch bunìk
+#define HIGHT 1000.f	//vÃ½Å¡ka obrazovky
+#define LENGHT 1000.f	//dÃ½lka obrazovky
+#define OUTLINE 5.f		//mezery okolo jednotlivejch bunÄ›k
 
-//!musí se poèítat s tim, e k vıšce a šíøce se pøiète ještì OUTLINE. To je kvùli 
+//!musÃ­ se poÄÃ­tat s tim, Å¾e k vÃ½Å¡ce a Å¡Ã­Å™ce se pÅ™iÄte jeÅ¡tÄ› OUTLINE. To je kvÅ¯li 
 
 class Render
 {
 private:
-	//Poèet bunìk na jednom øádku
-	int line = 16;
-	//Deklarace okna a eventù
 	sf::RenderWindow window;
+	//PoÄet bunÄ›k na jednom Å™Ã¡dku
+	int line = 22;
+	//Deklarace okna a eventÅ¯
 	sf::Event event;
+	int pocetMin = 99;
 public:
 	//Constructor
-	Render();	//rend je funkce která se volá main funkcí v source. pøed zavolání je potøeba deklarovat pøesnì cellPos a cell pomocí klásy Pole.h a Pole.cpp. viz main()
-	void rend();	//v update se volají všechny eventy. viz. update()
-	void update();	//Pozice bunìk na obrazovce. deklaruje se pomocí Pole.h a Pole.cpp
+	Render();	//rend je funkce kterÃ¡ se volÃ¡ main funkcÃ­ v source. pÅ™ed zavolÃ¡nÃ­ je potÅ™eba deklarovat pÅ™esnÄ› cellPos a cell pomocÃ­ klÃ¡sy Pole.h a Pole.cpp. viz main()
+	void rend();	//v update se volajÃ­ vÅ¡echny eventy. viz. update()
+	void update();	//Pozice bunÄ›k na obrazovce. deklaruje se pomocÃ­ Pole.h a Pole.cpp
 	void zaminovat();
+	sf::Texture setCisla(int x, int y);
 	std::vector<std::vector<sf::Vector2f>> cellPos;
-	std::vector<std::vector<sf::RectangleShape>> cell;	//Obsahuje informace o konkrétních buòkách. napø. velikost, barva a potom i pozice
+	std::vector<std::vector<sf::RectangleShape>> cell;	//Obsahuje informace o konkrÃ©tnÃ­ch buÅˆkÃ¡ch. napÅ™. velikost, barva a potom i pozice
 	std::vector<std::vector<bool>> isMine;
-	int pocetMin = 40;
+	std::vector<std::vector<bool>> isOpend;
 };
