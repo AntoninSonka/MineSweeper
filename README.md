@@ -1,9 +1,9 @@
 # MineSweeper
 my Minesweeper game - C++ - SFML
-Responds for click of mouse
-bomb = red
-not bomb = green
+Right click: show what it is
+Left click: place flag
 
-!Need to add ARIAL.TTF font
+!Need to add ARIAL.TTF font and other pictures into same directory.
 
-State: development
+
+State: development/first version
