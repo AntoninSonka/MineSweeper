@@ -6,15 +6,15 @@
 
 //viz Render.h
 
-#define HIGHT 1000.f
-#define LENGHT 1000.f
+#define HEIGHT 750.f
+#define LENGHT 750.f
 #define OUTLINE 5.f
 
 class Pole
 {
 private:
 	//viz Render.h
-	int line = 22;
+	int line = 16;
 public:
 	//tahle classa používá pouze constructor
 	Pole();
