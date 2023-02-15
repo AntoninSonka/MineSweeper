@@ -4,9 +4,6 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 
-#define HEIGHT 750.f	//výška obrazovky
-#define LENGHT 750.f	//dýlka obrazovky
-#define OUTLINE 5.f		//mezery okolo jednotlivejch buněk
 
 //!musí se počítat s tim, že k výšce a šířce se přičte ještě OUTLINE. To je kvůli 
 
@@ -15,15 +12,19 @@ class Render
 private:
 	sf::RenderWindow window;
 	//Počet buněk na jednom řádku
-	int line = 16;
 	//Deklarace okna a eventů
 	sf::Event event;
-	int pocetMin = 40;
 	bool isGameOver = false;
+	bool win = false;
 	int howManyOpen = 0;
 public:
-	//Constructor
-	Render();	//rend je funkce která se volá main funkcí v source. před zavolání je potřeba deklarovat přesně cellPos a cell pomocí klásy Pole.h a Pole.cpp. viz main()
+	Render();
+	int row = 22;
+	int column = 22;
+	int pocetMin = 99;
+	float HEIGHT = 1000.f;	//výška obrazovky
+	float LENGHT = 1000.f;	//dýlka obrazovky
+	float OUTLINE = 3.f;		//mezery okolo jednotlivejch buněk
 	void rend();	//v update se volají všechny eventy. viz. update()
 	void update();	//Pozice buněk na obrazovce. deklaruje se pomocí Pole.h a Pole.cpp
 	void zaminovat();
